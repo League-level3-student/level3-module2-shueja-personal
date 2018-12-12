@@ -6,14 +6,15 @@ public class _00_SortedArrayChecker {
 	//   and it returns a boolean.
 	//   The method returns true if the integer
 	//   array is in ascending order and false otherwise
-	public static intArraySorted(int[] arr) {
-		boolean sorted = true;
-		for (int i = 1; i>arr.size; i++) {
-			if(arr[i] >= arr[i-1]) {
+	public static boolean intArraySorted(int[] arr) {
+		boolean sorted = false;
+		for (int i = 0; i>arr.length - 1; i++) {
+			if(arr[i+1] >= arr[i]) {
 				sorted = true;
 			}
 			else {
 				sorted = false;
+				break;
 			}
 		}
 		return sorted;
@@ -24,14 +25,15 @@ public class _00_SortedArrayChecker {
 	//   and it returns a boolean.
 	//   The method returns true if the double
 	//   array is in ascending order and false otherwise
-	public static doubleArraySorted(double[] arr) {
+	public static boolean doubleArraySorted(double[] arr) {
 		boolean sorted = true;
-		for (int i = 1; i>arr.size; i++) {
+		for (int i = 1; i>arr.length; i++) {
 			if(arr[i] >= arr[i-1]) {
 				sorted = true;
 			}
 			else {
 				sorted = false;
+				break;
 			}
 		}
 		return sorted;
@@ -43,14 +45,15 @@ public class _00_SortedArrayChecker {
 	//   The method returns true if the character
 	//   array is in alphabetical order and false otherwise
 	//   (You can compare characters just like integers)
-	public static charArraySorted(char[] arr) {
+	public static boolean charArraySorted(char[] arr) {
 		boolean sorted = true;
-		for (int i = 1; i>arr.size; i++) {
+		for (int i = 1; i>arr.length; i++) {
 			if(arr[i] >= arr[i-1]) {
 				sorted = true;
 			}
 			else {
 				sorted = false;
+				break;
 			}
 		}
 		return sorted;
@@ -62,14 +65,15 @@ public class _00_SortedArrayChecker {
 	//   The method returns true if the String
 	//   array is in alphabetical order and false otherwise
 	//   (Use the compareTo(String) method
-	public static stringArraySorted(String[] arr) {
+	public static boolean stringArraySorted(String[] arr) {
 		boolean sorted = true;
-		for (int i = 1; i>arr.size; i++) {
+		for (int i = 1; i>arr.length; i++) {
 			if(arr[i].compareTo(arr[i-1]) >= 0) {
 				sorted = true;
 			}
 			else {
 				sorted = false;
+				break;
 			}
 		}
 		return sorted;
