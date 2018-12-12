@@ -61,7 +61,7 @@ public class _00_SortedArrayChecker {
 	//   and it returns a boolean.
 	//   The method returns true if the String
 	//   array is in alphabetical order and false otherwise
-	//   (Use the compareTo(String) method)
+	//   (Use the compareTo(String) method
 	public static stringArraySorted(String[] arr) {
 		boolean sorted = true;
 		for (int i = 1; i>arr.size; i++) {
