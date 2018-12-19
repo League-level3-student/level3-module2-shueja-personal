@@ -7,16 +7,16 @@ public class _00_SortedArrayChecker {
 	//   The method returns true if the integer
 	//   array is in ascending order and false otherwise
 	public static boolean intArraySorted(int[] arr) {
-		boolean sorted = false;
-		for (int i = 0; i>arr.length - 1; i++) {
-			if(arr[i+1] >= arr[i]) {
-				sorted = true;
-			}
-			else {
-				sorted = false;
-				break;
-			}
-		}
+		boolean sorted = true;
+		int n = arr.length;
+        for (int i = 0; i < n-1; i++) {
+            for (int j = 0; j < n-i-1; j++) {
+                if (arr[j] > arr[j+1])
+                {
+                    return false;
+                }
+            }
+        }
 		return sorted;
 	}
 	
