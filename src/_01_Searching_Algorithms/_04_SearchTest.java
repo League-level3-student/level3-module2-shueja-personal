@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+
 class _04_SearchTest {
 
 	// A MINIMUM OF 3 TESTS ARE REQUIRED FOR EACH METHOD
@@ -11,12 +12,16 @@ class _04_SearchTest {
 	@Test
 	public void testLinearSearch() {
 		//1. use the assertEquals method to test your linear search method.
+		String[] array = {"duck", "horse", "goose", "cow"};
+		assertEquals(2, _00_LinearSearch.linearSearch(array, "goose"));
 	}
 
 	@Test
 	public void testBinarySearch() {
 		//2. use the assertEquals method to test your binary search method.
 		//   remember that the array must be sorted
+		int[] nums = {1,2,3,5,6,8,80092583};
+		assertEquals(2, _01_BinarySearch.binarySearch(nums,0, nums.length, 3));
 	}
 	
 	@Test
